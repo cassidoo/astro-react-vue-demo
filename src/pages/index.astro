@@ -1,0 +1,50 @@
+---
+import Tour from '../components/Tour.astro';
+import CounterReact from '../components/CounterReact.jsx';
+import CounterVue from '../components/CounterVue.vue';
+
+let variableExample = '<=== look';
+---
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Astro</title>
+
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+
+    <link rel="stylesheet" href="/style/global.css">
+    <link rel="stylesheet" href="/style/home.css">
+
+    <style>
+        header {
+            display: flex;
+            flex-direction: column;
+            gap: 1em;
+            max-width: min(100%, 68ch);
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <header>
+            <div>
+                <img width="60" height="80" src="/assets/logo.svg" alt="Astro logo">
+                <h1>Welcome to <a href="https://astro.build/">Astro</a></h1>
+            </div>
+        </header>
+
+        <!-- if you don't have :visible here, the counters will
+             show up, but not work. They will work when they are
+             visible on the page (so you could have it at the
+             bottom of a long page and the JS wouldn't load until
+             you get to the component showing up) 
+        -->
+        <CounterReact:visible demo={variableExample} />
+        <CounterVue:visible demo={variableExample} />
+
+    </main>
+</body>
+</html>
