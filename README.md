@@ -2,7 +2,7 @@
 
 This is an incredibly small demo of using React and Vue together in an Astro project, with a variable passed in to both.
 
-## 🧞 Commands
+## Commands
 
 All commands are run from the root of the project, from a terminal:
 
